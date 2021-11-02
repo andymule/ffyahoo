@@ -1,11 +1,16 @@
 import os
 from collections import defaultdict
-
 from yahoo_oauth import OAuth2
-# Import packages
 import xml.etree.ElementTree as ET
 import re
 import csv
+
+weekstart = 1
+getNewDataWeek = 9
+weekend = 9
+gamekey="406."
+leaguekey="683339"
+getData = True
 
 # Thanks to https://www.billyboyballin.com/2019/08/18/yahoo-fantasy-api/
 
@@ -15,72 +20,84 @@ if not oauth.token_is_valid():
 
 print(oauth)
 
-
-# url = "https://fantasysports.yahooapis.com/fantasy/v2/leagues;league_keys=390.l.963114/standings"
-# r = oauth.session.get(url)
+url = "https://fantasysports.yahooapis.com/fantasy/v2/game/nfl"
+r = oauth.session.get(url)
+tree = ET.fromstring(r.text)
+# root = tree.getroot()
 # print(r.status_code)
-# 
-# # Convert to string and remove namespace. Parse the string and return root element of Tree 
-# xmlstring = r.text
-# xmlstring = re.sub(' xmlns="[^"]+"', '', xmlstring, count=1)
-# root = ET.fromstring(xmlstring)
-# 
-# # Initiate mylist
-# mylist = []
-# 
-# # For loop statement that will loop through appropriate elemental tags and return associated text content. Save that text content into dictionary and add dictionary to mylist.
-# team_keys = []
-# allteams = root.findall('./leagues/league/standings/teams/team')
-# for team in allteams:
-#     team_key = team.find('team_key')  # same level
-#     team_key = team_key.text
-#     team_keys.append(team_key)
-# 
-#     name = team.find('name')
-#     name = name.text
-#     number_of_moves = team.find('number_of_moves')
-#     number_of_moves = number_of_moves.text
-#     number_of_trades = team.find('number_of_trades')
-#     number_of_trades = number_of_trades.text
-#     for nickname in team.iter('nickname'):  # all at all levels
-#         nickname = nickname.text
-#     for season in team.iter('season'):
-#         season = season.text
-#     for points_for in team.iter('points_for'):
-#         points_for = points_for.text
-#     for points_against in team.iter('points_against'):
-#         points_against = points_against.text
-#     for rank in team.iter('rank'):
-#         rank = rank.text
-#     for wins in team.iter('wins'):
-#         wins = wins.text
-#     for losses in team.iter('losses'):
-#         losses = losses.text
-#     for ties in team.iter('ties'):
-#         ties = ties.text
-#     for playoff_seed in team.iter('playoff_seed'):
-#         playoff_seed = playoff_seed.text
-#     thisdict = dict(season=season, name=nickname, team_name=name, team_key=team_key, rank=rank,
-#                     wins=wins, losses=losses, ties=ties, points_for=points_for, points_against=points_against,
-#                     number_of_moves=number_of_moves, number_of_trades=number_of_trades)
-#     mylist.append(thisdict)
-# 
-# # get team data
-# team_matchups = {}
-# allteamsurl = "https://fantasysports.yahooapis.com/fantasy/v2/teams;team_keys="
-# for tkey in team_keys:
-#     allteamsurl += tkey + ','
-# allteamsurl = allteamsurl[:-1] + "/matchups;weeks=1,2,3,4,5,6,7,8,9,10,11,12,13"
-# r2 = oauth.session.get(allteamsurl)
-# print(r2.status_code)
+
+# '<?xml version="1.0" encoding="UTF-8"?>\n<fantasy_content xml:lang="en-US" yahoo:uri="http://fantasysports.yahooapis.com/fantasy/v2/game/nfl" time="17.794132232666ms" copyright="Data provided by Yahoo! and STATS, LLC" refresh_rate="60" xmlns:yahoo="http://www.yahooapis.com/v1/base.rng" xmlns="http://fantasysports.yahooapis.com/fantasy/v2/base.rng">\n <game>\n  <game_key>406</game_key>\n  <game_id>406</game_id>\n  <name>Football</name>\n  <code>nfl</code>\n  <type>full</type>\n  <url>https://football.fantasysports.yahoo.com/f1</url>\n  <season>2021</season>\n  <is_registration_over>1</is_registration_over>\n  <is_game_over>0</is_game_over>\n  <is_offseason>0</is_offseason>\n </game>\n</fantasy_content>\n<!-- fantasy-sports-api- -public-production-bf1-6cb9cc4b8f-wfr78 Mon Oct 18 17:24:32 UTC 2021 -->\n'
+url = "https://fantasysports.yahooapis.com/fantasy/v2/leagues;league_keys="+gamekey+"l.683339/standings"
+r = oauth.session.get(url)
+print(r.status_code)
 
 # Convert to string and remove namespace. Parse the string and return root element of Tree 
-# xmlstringteams = r2.text
-# xmlstringteams = re.sub(' xmlns="[^"]+"', '', xmlstringteams, count=1)
-# rootteams = ET.fromstring(xmlstringteams)
+xmlstring = r.text
+xmlstring = re.sub(' xmlns="[^"]+"', '', xmlstring, count=1)
+root = ET.fromstring(xmlstring)
 
-## text_file = open("matchups.xml", "w")
-## text_file.write(xmlstringteams)
+# Initiate mylist
+mylist = []
+
+# For loop statement that will loop through appropriate elemental tags and return associated text content. Save that text content into dictionary and add dictionary to mylist.
+team_keys = []
+allteams = root.findall('./leagues/league/standings/teams/team')
+for team in allteams:
+    team_key = team.find('team_key')  # same level
+    team_key = team_key.text
+    team_keys.append(team_key)
+
+    name = team.find('name')
+    name = name.text
+    number_of_moves = team.find('number_of_moves')
+    number_of_moves = number_of_moves.text
+    number_of_trades = team.find('number_of_trades')
+    number_of_trades = number_of_trades.text
+    for nickname in team.iter('nickname'):  # all at all levels
+        nickname = nickname.text
+    for season in team.iter('season'):
+        season = season.text
+    for points_for in team.iter('points_for'):
+        points_for = points_for.text
+    for points_against in team.iter('points_against'):
+        points_against = points_against.text
+    for rank in team.iter('rank'):
+        rank = rank.text
+    for wins in team.iter('wins'):
+        wins = wins.text
+    for losses in team.iter('losses'):
+        losses = losses.text
+    for ties in team.iter('ties'):
+        ties = ties.text
+    for playoff_seed in team.iter('playoff_seed'):
+        playoff_seed = playoff_seed.text
+    thisdict = dict(season=season, name=nickname, team_name=name, team_key=team_key, rank=rank,
+                    wins=wins, losses=losses, ties=ties, points_for=points_for, points_against=points_against,
+                    number_of_moves=number_of_moves, number_of_trades=number_of_trades)
+    mylist.append(thisdict)
+
+# get team data
+if getData and getNewDataWeek < weekend:
+    team_matchups = {}
+    allteamsurl = "https://fantasysports.yahooapis.com/fantasy/v2/teams;team_keys="
+    for tkey in team_keys:
+        allteamsurl += tkey + ','
+    weekstr = ""
+    for j in range(weekstart, weekend):
+        weekstr += str(j) +','
+        # 1,2,3,4,5,6,7,8,9,10,11,12,13
+    weekstr = weekstr[:-1]
+    allteamsurl = allteamsurl[:-1] + "/matchups;weeks="+weekstr
+    r2 = oauth.session.get(allteamsurl)
+    print(r2.status_code)
+
+    # Convert to string and remove namespace. Parse the string and return root element of Tree 
+    xmlstringteams = r2.text
+    xmlstringteams = re.sub(' xmlns="[^"]+"', '', xmlstringteams, count=1)
+    rootteams = ET.fromstring(xmlstringteams)
+
+    text_file = open("matchups.xml", "w")
+    text_file.write(xmlstringteams)
 
 
 class WinMargin:
@@ -119,7 +136,7 @@ class Team:
 AllPlayers = defaultdict(lambda: Player())
 AllTeams = defaultdict(lambda: Team())
 
-allteamsurl = "https://fantasysports.yahooapis.com/fantasy/v2/teams;team_keys=390.l.963114.t.3,390.l.963114.t.8,390.l.963114.t.13,390.l.963114.t.9,390.l.963114.t.7,390.l.963114.t.4,390.l.963114.t.11,390.l.963114.t.6,390.l.963114.t.14,390.l.963114.t.5,390.l.963114.t.2,390.l.963114.t.10,390.l.963114.t.12,390.l.963114.t.1/matchups;weeks=1,2,3,4,5,6,7,8,9,10,11,12,13"
+allteamsurl = "https://fantasysports.yahooapis.com/fantasy/v2/teams;team_keys="+gamekey+"l.683339.t.3,"+gamekey+"l.683339.t.8,"+gamekey+"l.683339.t.13,"+gamekey+"l.683339.t.9,"+gamekey+"l.683339.t.7,"+gamekey+"l.683339.t.4,"+gamekey+"l.683339.t.11,"+gamekey+"l.683339.t.6,"+gamekey+"l.683339.t.14,"+gamekey+"l.683339.t.5,"+gamekey+"l.683339.t.2,"+gamekey+"l.683339.t.10,"+gamekey+"l.683339.t.12,"+gamekey+"l.683339.t.1/matchups;weeks=1,2,3,4,5,6,7,8,9,10,11,12,13"
 text_file = open("matchups.xml", "r")
 
 rootteams = ET.fromstring(text_file.read())
@@ -171,23 +188,22 @@ for team in AllTeams.values():
                 team.smallestWin.team = team.name
 
 ##############download all rosters##########################
-### https://fantasysports.yahooapis.com/fantasy/v2/team//roster;week=10
-# rosterurl = "https://fantasysports.yahooapis.com/fantasy/v2/teams;team_keys=390.l.963114.t.3,390.l.963114.t.8,390.l.963114.t.13,390.l.963114.t.9,390.l.963114.t.7,390.l.963114.t.4,390.l.963114.t.11,390.l.963114.t.6,390.l.963114.t.14,390.l.963114.t.5,390.l.963114.t.2,390.l.963114.t.10,390.l.963114.t.12,390.l.963114.t.1/roster;week="
-# for i in range(1, 2):
-#     thisweekrosterurl = rosterurl + str(i)
-#     # url = "https://fantasysports.yahooapis.com/fantasy/v2/leagues;league_keys=390.l.963114/standings"
-#     r = oauth.session.get(thisweekrosterurl)
-#     print("week" + str(i) + "  " + str(r.status_code))
-#     xmlstring = r.text
-#     xmlstring = re.sub(' xmlns="[^"]+"', '', xmlstring, count=1)
-#     text_file = open("rosterweek" + str(i) + ".xml", "w")
-#     text_file.write(xmlstring)
-# 
-# # Convert to string and remove namespace. Parse the string and return root element of Tree 
+## https://fantasysports.yahooapis.com/fantasy/v2/team//roster;week=10
+if getData and getNewDataWeek < weekend:
+    rosterurl = "https://fantasysports.yahooapis.com/fantasy/v2/teams;team_keys="+gamekey+"l.683339.t.3,"+gamekey+"l.683339.t.8,"+gamekey+"l.683339.t.13,"+gamekey+"l.683339.t.9,"+gamekey+"l.683339.t.7,"+gamekey+"l.683339.t.4,"+gamekey+"l.683339.t.11,"+gamekey+"l.683339.t.6,"+gamekey+"l.683339.t.14,"+gamekey+"l.683339.t.5,"+gamekey+"l.683339.t.2,"+gamekey+"l.683339.t.10,"+gamekey+"l.683339.t.12,"+gamekey+"l.683339.t.1/roster;week="
+    for i in range(getNewDataWeek, weekend):
+        thisweekrosterurl = rosterurl + str(i)
+        # url = "https://fantasysports.yahooapis.com/fantasy/v2/leagues;league_keys="+gamekey+"l.683339/standings"
+        r = oauth.session.get(thisweekrosterurl)
+        print("week" + str(i) + "  " + str(r.status_code))
+        xmlstring = r.text
+        xmlstring = re.sub(' xmlns="[^"]+"', '', xmlstring, count=1)
+        text_file = open("rosterweek" + str(i) + ".xml", "w")
+        text_file.write(xmlstring)
+# Convert to string and remove namespace. Parse the string and return root element of Tree 
 
 ####### Iterate rosters #####
-
-for i in range(1, 14):
+for i in range(weekstart, weekend):
     rosterfile = open("rosterweek{}.xml".format(i), "r")
     rosterweek = ET.fromstring(rosterfile.read())
     for team in rosterweek.findall('./teams/team'):
@@ -220,44 +236,42 @@ for i in range(1, 14):
 
 ########### DL all player data of players who played this year ############################
 # max data is 2000  or 32779           
-# maxURLsize = 32779
-# 
-# 
-# #### get player data
-# ## fill all points all players
-# def SaveWeekPlayerData(geturl, weeknum, playerNum):
-#     fullURL = geturl + weeknum
-#     reqsize = len(fullURL)
-#     print(reqsize)
-#     r = oauth.session.get(fullURL)
-#     xmlstring = r.text
-#     xmlstring = re.sub(' xmlns="[^"]+"', '', xmlstring, count=1)
-#     weekdatafile = open("playerstatweek" + weeknum + "." + playerNum + ".xml", "w")
-#     weekdatafile.write(xmlstring)
-# 
-# 
-# playersurlstart = "https://fantasysports.yahooapis.com/fantasy/v2/league/390.l.963114/players;player_keys="
-# playersurlend = "/stats;type=week;week="
-# gamestr = "390.p."
-# playersurl = playersurlstart
-# playercnt = len(AllPlayers.keys())
-# maxplayerQuery = 25  # yahoo max query size gross ugh
-# for weeknum in range(1, 14):
-#     playersurl = playersurlstart
-#     for i, playerid in enumerate(AllPlayers.keys()):
-#         if i == playercnt - 1:  # is last key
-#             playersurl += gamestr + playerid + ","
-#             SaveWeekPlayerData(playersurl[:-1] + playersurlend, str(weeknum), str(i))
-#         elif i != 0 and i % maxplayerQuery == 0:
-#             SaveWeekPlayerData(playersurl[:-1] + playersurlend, str(weeknum), str(i))
-#             playersurl = playersurlstart
-#             playersurl += gamestr + playerid + ","
-#         elif len(playersurl) + len(playersurlend) + len(playerid) + len(gamestr) + 10 < maxURLsize:  # more size left
-#             playersurl += gamestr + playerid + ","
-#         else:  # is max size URL 
-#             SaveWeekPlayerData(playersurl[:-1] + playersurlend, str(weeknum), str(i))
-#             playersurl = playersurlstart
-#             playersurl += gamestr + playerid + ","
+maxURLsize = 32779
+#### get player data
+## fill all points all players
+def SaveWeekPlayerData(geturl, weeknum, playerNum):
+    fullURL = geturl + weeknum
+    reqsize = len(fullURL)
+    print(reqsize)
+    r = oauth.session.get(fullURL)
+    xmlstring = r.text
+    xmlstring = re.sub(' xmlns="[^"]+"', '', xmlstring, count=1)
+    weekdatafile = open("playerstatweek" + weeknum + "." + playerNum + ".xml", "w")
+    weekdatafile.write(xmlstring)
+
+if getData and getNewDataWeek < weekend:
+    playersurlstart = "https://fantasysports.yahooapis.com/fantasy/v2/league/"+gamekey+"l.683339/players;player_keys="
+    playersurlend = "/stats;type=week;week="
+    gamestr = ""+gamekey+"p."
+    playersurl = playersurlstart
+    playercnt = len(AllPlayers.keys())
+    maxplayerQuery = 25  # yahoo max query size gross ugh
+    for weeknum in range(getNewDataWeek, weekend):
+        playersurl = playersurlstart
+        for i, playerid in enumerate(AllPlayers.keys()):
+            if i == playercnt - 1:  # is last key
+                playersurl += gamestr + playerid + ","
+                SaveWeekPlayerData(playersurl[:-1] + playersurlend, str(weeknum), str(i))
+            elif i != 0 and i % maxplayerQuery == 0:
+                SaveWeekPlayerData(playersurl[:-1] + playersurlend, str(weeknum), str(i))
+                playersurl = playersurlstart
+                playersurl += gamestr + playerid + ","
+            elif len(playersurl) + len(playersurlend) + len(playerid) + len(gamestr) + 10 < maxURLsize:  # more size left
+                playersurl += gamestr + playerid + ","
+            else:  # is max size URL 
+                SaveWeekPlayerData(playersurl[:-1] + playersurlend, str(weeknum), str(i))
+                playersurl = playersurlstart
+                playersurl += gamestr + playerid + ","
 
 
 print()
