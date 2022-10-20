@@ -5,12 +5,14 @@ import xml.etree.ElementTree as ET
 import re
 import csv
 
+# NEEDS TO DOWNLOAD ONCE BEFORE HAVING CORRECT DATA aka RUN TWICE sry myself
+
 weekstart = 1
-getNewDataWeek = 9
-weekend = 9
-gamekey="406."
-leaguekey="683339"
-getData = True
+getNewDataWeek = 5
+weekend = 7  #(exclusive i think)
+gamekey="414."
+leaguekey="859655" #683339
+getData = False
 
 # Thanks to https://www.billyboyballin.com/2019/08/18/yahoo-fantasy-api/
 
@@ -18,7 +20,10 @@ oauth = OAuth2(None, None, from_file='oauth.json')
 if not oauth.token_is_valid():
     oauth.refresh_access_token()
 
+
 print(oauth)
+guid = oauth.guid
+print(guid)
 
 url = "https://fantasysports.yahooapis.com/fantasy/v2/game/nfl"
 r = oauth.session.get(url)
@@ -27,7 +32,8 @@ tree = ET.fromstring(r.text)
 # print(r.status_code)
 
 # '<?xml version="1.0" encoding="UTF-8"?>\n<fantasy_content xml:lang="en-US" yahoo:uri="http://fantasysports.yahooapis.com/fantasy/v2/game/nfl" time="17.794132232666ms" copyright="Data provided by Yahoo! and STATS, LLC" refresh_rate="60" xmlns:yahoo="http://www.yahooapis.com/v1/base.rng" xmlns="http://fantasysports.yahooapis.com/fantasy/v2/base.rng">\n <game>\n  <game_key>406</game_key>\n  <game_id>406</game_id>\n  <name>Football</name>\n  <code>nfl</code>\n  <type>full</type>\n  <url>https://football.fantasysports.yahoo.com/f1</url>\n  <season>2021</season>\n  <is_registration_over>1</is_registration_over>\n  <is_game_over>0</is_game_over>\n  <is_offseason>0</is_offseason>\n </game>\n</fantasy_content>\n<!-- fantasy-sports-api- -public-production-bf1-6cb9cc4b8f-wfr78 Mon Oct 18 17:24:32 UTC 2021 -->\n'
-url = "https://fantasysports.yahooapis.com/fantasy/v2/leagues;league_keys="+gamekey+"l.683339/standings"
+#https://fantasysports.yahooapis.com/fantasy/v2/leagues;league_keys=411.l.1239/
+url = "https://fantasysports.yahooapis.com/fantasy/v2/leagues;league_keys="+gamekey+"l."+leaguekey+"/standings"
 r = oauth.session.get(url)
 print(r.status_code)
 
@@ -136,7 +142,7 @@ class Team:
 AllPlayers = defaultdict(lambda: Player())
 AllTeams = defaultdict(lambda: Team())
 
-allteamsurl = "https://fantasysports.yahooapis.com/fantasy/v2/teams;team_keys="+gamekey+"l.683339.t.3,"+gamekey+"l.683339.t.8,"+gamekey+"l.683339.t.13,"+gamekey+"l.683339.t.9,"+gamekey+"l.683339.t.7,"+gamekey+"l.683339.t.4,"+gamekey+"l.683339.t.11,"+gamekey+"l.683339.t.6,"+gamekey+"l.683339.t.14,"+gamekey+"l.683339.t.5,"+gamekey+"l.683339.t.2,"+gamekey+"l.683339.t.10,"+gamekey+"l.683339.t.12,"+gamekey+"l.683339.t.1/matchups;weeks=1,2,3,4,5,6,7,8,9,10,11,12,13"
+allteamsurl = "https://fantasysports.yahooapis.com/fantasy/v2/teams;team_keys="+gamekey+"l."+leaguekey+".t.3,"+gamekey+"l."+leaguekey+".t.8,"+gamekey+"l."+leaguekey+".t.13,"+gamekey+"l."+leaguekey+".t.9,"+gamekey+"l."+leaguekey+".t.7,"+gamekey+"l."+leaguekey+".t.4,"+gamekey+"l."+leaguekey+".t.11,"+gamekey+"l."+leaguekey+".t.6,"+gamekey+"l."+leaguekey+".t.14,"+gamekey+"l."+leaguekey+".t.5,"+gamekey+"l."+leaguekey+".t.2,"+gamekey+"l."+leaguekey+".t.10,"+gamekey+"l."+leaguekey+".t.12,"+gamekey+"l."+leaguekey+".t.1/matchups;weeks=1,2,3,4,5,6,7,8,9,10,11,12,13"
 text_file = open("matchups.xml", "r")
 
 rootteams = ET.fromstring(text_file.read())
@@ -155,19 +161,21 @@ for matchup in allmatchups:
     team1projected = float(matchup.findall('teams/team/team_projected_points/total')[0].text)
     team2projected = float(matchup.findall('teams/team/team_projected_points/total')[1].text)
 
-    AllTeams[team1key].name = team1name
-    AllTeams[team1key].weeklyScores[week] = team1score
-    AllTeams[team1key].weeklyProjScores[week] = team1projected
-    AllTeams[team1key].opponentWeeklyScores[week] = team2score
-    AllTeams[team1key].opponentName[week] = team2name
-    AllTeams[team1key].opponentKey[week] = team2key
+    if team1name != "THE BYE TEAM":
+        AllTeams[team1key].name = team1name
+        AllTeams[team1key].weeklyScores[week] = team1score
+        AllTeams[team1key].weeklyProjScores[week] = team1projected
+        AllTeams[team1key].opponentWeeklyScores[week] = team2score
+        AllTeams[team1key].opponentName[week] = team2name
+        AllTeams[team1key].opponentKey[week] = team2key
 
-    AllTeams[team2key].name = team2name
-    AllTeams[team2key].weeklyScores[week] = team2score
-    AllTeams[team2key].weeklyProjScores[week] = team2projected
-    AllTeams[team2key].opponentWeeklyScores[week] = team1score
-    AllTeams[team2key].opponentName[week] = team1name
-    AllTeams[team2key].opponentKey[week] = team1key
+    if team2name != "THE BYE TEAM":
+        AllTeams[team2key].name = team2name
+        AllTeams[team2key].weeklyScores[week] = team2score
+        AllTeams[team2key].weeklyProjScores[week] = team2projected
+        AllTeams[team2key].opponentWeeklyScores[week] = team1score
+        AllTeams[team2key].opponentName[week] = team1name
+        AllTeams[team2key].opponentKey[week] = team1key
 
 ################ determine biggest and smallest wins ############################
 for team in AllTeams.values():
@@ -175,6 +183,8 @@ for team in AllTeams.values():
                        team.opponentName.values())
     for week, mine, yours, yourname in matchupScore:
         scoreDiff = mine - yours
+        if yourname == "THE BYE TEAM":
+            continue
         if scoreDiff > 0:
             if scoreDiff > team.biggestWin.margin:
                 team.biggestWin.margin = scoreDiff
@@ -190,10 +200,10 @@ for team in AllTeams.values():
 ##############download all rosters##########################
 ## https://fantasysports.yahooapis.com/fantasy/v2/team//roster;week=10
 if getData and getNewDataWeek < weekend:
-    rosterurl = "https://fantasysports.yahooapis.com/fantasy/v2/teams;team_keys="+gamekey+"l.683339.t.3,"+gamekey+"l.683339.t.8,"+gamekey+"l.683339.t.13,"+gamekey+"l.683339.t.9,"+gamekey+"l.683339.t.7,"+gamekey+"l.683339.t.4,"+gamekey+"l.683339.t.11,"+gamekey+"l.683339.t.6,"+gamekey+"l.683339.t.14,"+gamekey+"l.683339.t.5,"+gamekey+"l.683339.t.2,"+gamekey+"l.683339.t.10,"+gamekey+"l.683339.t.12,"+gamekey+"l.683339.t.1/roster;week="
+    rosterurl = "https://fantasysports.yahooapis.com/fantasy/v2/teams;team_keys="+gamekey+"l."+leaguekey+".t.3,"+gamekey+"l."+leaguekey+".t.8,"+gamekey+"l."+leaguekey+".t.13,"+gamekey+"l."+leaguekey+".t.9,"+gamekey+"l."+leaguekey+".t.7,"+gamekey+"l."+leaguekey+".t.4,"+gamekey+"l."+leaguekey+".t.11,"+gamekey+"l."+leaguekey+".t.6,"+gamekey+"l."+leaguekey+".t.14,"+gamekey+"l."+leaguekey+".t.5,"+gamekey+"l."+leaguekey+".t.2,"+gamekey+"l."+leaguekey+".t.10,"+gamekey+"l."+leaguekey+".t.12,"+gamekey+"l."+leaguekey+".t.1/roster;week="
     for i in range(getNewDataWeek, weekend):
         thisweekrosterurl = rosterurl + str(i)
-        # url = "https://fantasysports.yahooapis.com/fantasy/v2/leagues;league_keys="+gamekey+"l.683339/standings"
+        # url = "https://fantasysports.yahooapis.com/fantasy/v2/leagues;league_keys="+gamekey+"l."+leaguekey+"/standings"
         r = oauth.session.get(thisweekrosterurl)
         print("week" + str(i) + "  " + str(r.status_code))
         xmlstring = r.text
@@ -250,7 +260,7 @@ def SaveWeekPlayerData(geturl, weeknum, playerNum):
     weekdatafile.write(xmlstring)
 
 if getData and getNewDataWeek < weekend:
-    playersurlstart = "https://fantasysports.yahooapis.com/fantasy/v2/league/"+gamekey+"l.683339/players;player_keys="
+    playersurlstart = "https://fantasysports.yahooapis.com/fantasy/v2/league/"+gamekey+"l."+leaguekey+"/players;player_keys="
     playersurlend = "/stats;type=week;week="
     gamestr = ""+gamekey+"p."
     playersurl = playersurlstart
