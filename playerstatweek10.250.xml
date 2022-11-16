@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<fantasy_content xml:lang="en-US" yahoo:uri="http://fantasysports.yahooapis.com/fantasy/v2/league/414.l.859655/players;player_keys=414.p.33348,414.p.32612,414.p.30788,414.p.31496,414.p.28227,414.p.100001,414.p.31394,414.p.30132,414.p.32523,414.p.30266,414.p.100009,414.p.29785,414.p.29344,414.p.30153,414.p.32892,414.p.27369,414.p.100016,414.p.34029,414.p.33781,414.p.29235,414.p.100008,414.p.100015,414.p.33455,414.p.33592,414.p.32384/stats;type=week;week=7" time="45.971155166626ms" copyright="Data provided by Yahoo! and STATS, LLC" refresh_rate="60" xmlns:yahoo="http://www.yahooapis.com/v1/base.rng">
+<fantasy_content xml:lang="en-US" yahoo:uri="http://fantasysports.yahooapis.com/fantasy/v2/league/414.l.859655/players;player_keys=414.p.33348,414.p.32612,414.p.30788,414.p.31496,414.p.28227,414.p.100001,414.p.31394,414.p.30132,414.p.32523,414.p.30266,414.p.100009,414.p.29785,414.p.29344,414.p.30153,414.p.32892,414.p.27369,414.p.100016,414.p.34029,414.p.33781,414.p.29235,414.p.100008,414.p.100015,414.p.33455,414.p.33592,414.p.32384/stats;type=week;week=10" time="41.760921478271ms" copyright="Data provided by Yahoo! and STATS, LLC" refresh_rate="60" xmlns:yahoo="http://www.yahooapis.com/v1/base.rng">
  <league>
   <league_key>414.l.859655</league_key>
   <league_id>859655</league_id>
@@ -9,9 +9,9 @@
   <password/>
   <draft_status>postdraft</draft_status>
   <num_teams>14</num_teams>
-  <edit_key>8</edit_key>
+  <edit_key>11</edit_key>
   <weekly_deadline/>
-  <league_update_timestamp>1666680119</league_update_timestamp>
+  <league_update_timestamp>1668496713</league_update_timestamp>
   <scoring_type>head</scoring_type>
   <league_type>private</league_type>
   <renew>406_683339</renew>
@@ -22,7 +22,7 @@
   <allow_add_to_dl_extra_pos>1</allow_add_to_dl_extra_pos>
   <is_pro_league>0</is_pro_league>
   <is_cash_league>0</is_cash_league>
-  <current_week>8</current_week>
+  <current_week>11</current_week>
   <start_week>1</start_week>
   <start_date>2022-09-08</start_date>
   <end_week>17</end_week>
@@ -70,10 +70,10 @@
      <position>W/R</position>
     </eligible_positions>
     <has_player_notes>1</has_player_notes>
-    <player_notes_last_timestamp>1666559093</player_notes_last_timestamp>
+    <player_notes_last_timestamp>1668403294</player_notes_last_timestamp>
     <player_stats>
      <coverage_type>week</coverage_type>
-     <week>7</week>
+     <week>10</week>
      <stats>
       <stat>
        <stat_id>4</stat_id>
@@ -113,19 +113,19 @@
       </stat>
       <stat>
        <stat_id>78</stat_id>
-       <value>2</value>
+       <value>8</value>
       </stat>
       <stat>
        <stat_id>11</stat_id>
-       <value>0</value>
+       <value>5</value>
       </stat>
       <stat>
        <stat_id>12</stat_id>
-       <value>0</value>
+       <value>119</value>
       </stat>
       <stat>
        <stat_id>13</stat_id>
-       <value>0</value>
+       <value>2</value>
       </stat>
       <stat>
        <stat_id>14</stat_id>
@@ -137,7 +137,7 @@
       </stat>
       <stat>
        <stat_id>80</stat_id>
-       <value>0</value>
+       <value>5</value>
       </stat>
       <stat>
        <stat_id>16</stat_id>
@@ -155,8 +155,8 @@
     </player_stats>
     <player_points>
      <coverage_type>week</coverage_type>
-     <week>7</week>
-     <total>0.00</total>
+     <week>10</week>
+     <total>26.40</total>
     </player_points>
    </player>
    <player>
@@ -200,7 +200,7 @@
     </eligible_positions>
     <player_stats>
      <coverage_type>week</coverage_type>
-     <week>7</week>
+     <week>10</week>
      <stats>
       <stat>
        <stat_id>4</stat_id>
@@ -240,15 +240,15 @@
       </stat>
       <stat>
        <stat_id>78</stat_id>
-       <value>0</value>
+       <value>1</value>
       </stat>
       <stat>
        <stat_id>11</stat_id>
-       <value>0</value>
+       <value>1</value>
       </stat>
       <stat>
        <stat_id>12</stat_id>
-       <value>0</value>
+       <value>4</value>
       </stat>
       <stat>
        <stat_id>13</stat_id>
@@ -256,7 +256,7 @@
       </stat>
       <stat>
        <stat_id>14</stat_id>
-       <value>46</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>15</stat_id>
@@ -282,8 +282,8 @@
     </player_stats>
     <player_points>
      <coverage_type>week</coverage_type>
-     <week>7</week>
-     <total>2.30</total>
+     <week>10</week>
+     <total>0.40</total>
     </player_points>
    </player>
    <player>
@@ -323,11 +323,9 @@
     <eligible_positions>
      <position>QB</position>
     </eligible_positions>
-    <has_player_notes>1</has_player_notes>
-    <player_notes_last_timestamp>1665979799</player_notes_last_timestamp>
     <player_stats>
      <coverage_type>week</coverage_type>
-     <week>7</week>
+     <week>10</week>
      <stats>
       <stat>
        <stat_id>4</stat_id>
@@ -409,7 +407,7 @@
     </player_stats>
     <player_points>
      <coverage_type>week</coverage_type>
-     <week>7</week>
+     <week>10</week>
      <total>0.00</total>
     </player_points>
    </player>
@@ -424,9 +422,6 @@
      <ascii_last>Pringle</ascii_last>
     </name>
     <url>https://sports.yahoo.com/nfl/players/31496</url>
-    <status>IR</status>
-    <status_full>Injured Reserve</status_full>
-    <injury_note>Calf</injury_note>
     <editorial_player_key>nfl.p.31496</editorial_player_key>
     <editorial_team_key>nfl.t.3</editorial_team_key>
     <editorial_team_full_name>Chicago Bears</editorial_team_full_name>
@@ -454,11 +449,12 @@
      <position>WR</position>
      <position>W/T</position>
      <position>W/R</position>
-     <position>IR</position>
     </eligible_positions>
+    <has_player_notes>1</has_player_notes>
+    <player_notes_last_timestamp>1668389953</player_notes_last_timestamp>
     <player_stats>
      <coverage_type>week</coverage_type>
-     <week>7</week>
+     <week>10</week>
      <stats>
       <stat>
        <stat_id>4</stat_id>
@@ -498,15 +494,15 @@
       </stat>
       <stat>
        <stat_id>78</stat_id>
-       <value>0</value>
+       <value>2</value>
       </stat>
       <stat>
        <stat_id>11</stat_id>
-       <value>0</value>
+       <value>1</value>
       </stat>
       <stat>
        <stat_id>12</stat_id>
-       <value>0</value>
+       <value>12</value>
       </stat>
       <stat>
        <stat_id>13</stat_id>
@@ -522,7 +518,7 @@
       </stat>
       <stat>
        <stat_id>80</stat_id>
-       <value>0</value>
+       <value>1</value>
       </stat>
       <stat>
        <stat_id>16</stat_id>
@@ -540,8 +536,8 @@
     </player_stats>
     <player_points>
      <coverage_type>week</coverage_type>
-     <week>7</week>
-     <total>0.00</total>
+     <week>10</week>
+     <total>1.70</total>
     </player_points>
    </player>
    <player>
@@ -581,9 +577,11 @@
     <eligible_positions>
      <position>K</position>
     </eligible_positions>
+    <has_player_notes>1</has_player_notes>
+    <player_notes_last_timestamp>1668391881</player_notes_last_timestamp>
     <player_stats>
      <coverage_type>week</coverage_type>
-     <week>7</week>
+     <week>10</week>
      <stats>
       <stat>
        <stat_id>19</stat_id>
@@ -591,7 +589,7 @@
       </stat>
       <stat>
        <stat_id>20</stat_id>
-       <value>1</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>21</stat_id>
@@ -599,11 +597,11 @@
       </stat>
       <stat>
        <stat_id>22</stat_id>
-       <value>1</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>23</stat_id>
-       <value>1</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>24</stat_id>
@@ -617,8 +615,8 @@
     </player_stats>
     <player_points>
      <coverage_type>week</coverage_type>
-     <week>7</week>
-     <total>18.00</total>
+     <week>10</week>
+     <total>6.00</total>
     </player_points>
    </player>
    <player>
@@ -660,15 +658,15 @@
     </eligible_positions>
     <player_stats>
      <coverage_type>week</coverage_type>
-     <week>7</week>
+     <week>10</week>
      <stats>
       <stat>
        <stat_id>31</stat_id>
-       <value>35</value>
+       <value>25</value>
       </stat>
       <stat>
        <stat_id>32</stat_id>
-       <value>3</value>
+       <value>1</value>
       </stat>
       <stat>
        <stat_id>33</stat_id>
@@ -692,15 +690,15 @@
       </stat>
       <stat>
        <stat_id>67</stat_id>
-       <value>1</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>69</stat_id>
-       <value>537</value>
+       <value>333</value>
       </stat>
       <stat>
        <stat_id>77</stat_id>
-       <value>0</value>
+       <value>4</value>
       </stat>
       <stat>
        <stat_id>50</stat_id>
@@ -720,7 +718,7 @@
       </stat>
       <stat>
        <stat_id>54</stat_id>
-       <value>0</value>
+       <value>1</value>
       </stat>
       <stat>
        <stat_id>55</stat_id>
@@ -728,7 +726,7 @@
       </stat>
       <stat>
        <stat_id>56</stat_id>
-       <value>1</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>70</stat_id>
@@ -748,7 +746,7 @@
       </stat>
       <stat>
        <stat_id>74</stat_id>
-       <value>0</value>
+       <value>1</value>
       </stat>
       <stat>
        <stat_id>75</stat_id>
@@ -756,7 +754,7 @@
       </stat>
       <stat>
        <stat_id>76</stat_id>
-       <value>1</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>82</stat_id>
@@ -766,8 +764,8 @@
     </player_stats>
     <player_points>
      <coverage_type>week</coverage_type>
-     <week>7</week>
-     <total>-4.00</total>
+     <week>10</week>
+     <total>3.00</total>
     </player_points>
    </player>
    <player>
@@ -782,25 +780,25 @@
     </name>
     <url>https://sports.yahoo.com/nfl/players/31394</url>
     <editorial_player_key>nfl.p.31394</editorial_player_key>
-    <editorial_team_key>nfl.t.25</editorial_team_key>
-    <editorial_team_full_name>San Francisco 49ers</editorial_team_full_name>
-    <editorial_team_abbr>SF</editorial_team_abbr>
-    <editorial_team_url>https://sports.yahoo.com/nfl/teams/san-francisco/</editorial_team_url>
+    <editorial_team_key>nfl.t.15</editorial_team_key>
+    <editorial_team_full_name>Miami Dolphins</editorial_team_full_name>
+    <editorial_team_abbr>Mia</editorial_team_abbr>
+    <editorial_team_url>https://sports.yahoo.com/nfl/teams/miami/</editorial_team_url>
     <bye_weeks>
-     <week>9</week>
+     <week>11</week>
     </bye_weeks>
     <is_keeper>
      <status></status>
      <cost></cost>
      <kept></kept>
     </is_keeper>
-    <uniform_number>22</uniform_number>
+    <uniform_number>23</uniform_number>
     <display_position>RB</display_position>
     <headshot>
-     <url>https://s.yimg.com/iu/api/res/1.2/6x43bOVnketwR2SPMsrtgw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/09062022/31394.png</url>
+     <url>https://s.yimg.com/iu/api/res/1.2/We7VtHVodVD_TH5jUJmmmg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/11072022/31394.png</url>
      <size>small</size>
     </headshot>
-    <image_url>https://s.yimg.com/iu/api/res/1.2/6x43bOVnketwR2SPMsrtgw--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/09062022/31394.png</image_url>
+    <image_url>https://s.yimg.com/iu/api/res/1.2/We7VtHVodVD_TH5jUJmmmg--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/11072022/31394.png</image_url>
     <is_undroppable>0</is_undroppable>
     <position_type>O</position_type>
     <primary_position>RB</primary_position>
@@ -809,10 +807,10 @@
      <position>W/R</position>
     </eligible_positions>
     <has_player_notes>1</has_player_notes>
-    <player_notes_last_timestamp>1666630763</player_notes_last_timestamp>
+    <player_notes_last_timestamp>1668448801</player_notes_last_timestamp>
     <player_stats>
      <coverage_type>week</coverage_type>
-     <week>7</week>
+     <week>10</week>
      <stats>
       <stat>
        <stat_id>4</stat_id>
@@ -836,31 +834,31 @@
       </stat>
       <stat>
        <stat_id>8</stat_id>
-       <value>7</value>
+       <value>17</value>
       </stat>
       <stat>
        <stat_id>9</stat_id>
-       <value>54</value>
+       <value>119</value>
       </stat>
       <stat>
        <stat_id>10</stat_id>
-       <value>0</value>
-      </stat>
-      <stat>
-       <stat_id>81</stat_id>
-       <value>3</value>
-      </stat>
-      <stat>
-       <stat_id>78</stat_id>
        <value>1</value>
       </stat>
       <stat>
+       <stat_id>81</stat_id>
+       <value>6</value>
+      </stat>
+      <stat>
+       <stat_id>78</stat_id>
+       <value>5</value>
+      </stat>
+      <stat>
        <stat_id>11</stat_id>
-       <value>0</value>
+       <value>2</value>
       </stat>
       <stat>
        <stat_id>12</stat_id>
-       <value>0</value>
+       <value>24</value>
       </stat>
       <stat>
        <stat_id>13</stat_id>
@@ -876,7 +874,7 @@
       </stat>
       <stat>
        <stat_id>80</stat_id>
-       <value>0</value>
+       <value>1</value>
       </stat>
       <stat>
        <stat_id>16</stat_id>
@@ -894,8 +892,8 @@
     </player_stats>
     <player_points>
      <coverage_type>week</coverage_type>
-     <week>7</week>
-     <total>6.30</total>
+     <week>10</week>
+     <total>22.60</total>
     </player_points>
    </player>
    <player>
@@ -936,9 +934,11 @@
      <position>TE</position>
      <position>W/T</position>
     </eligible_positions>
+    <has_player_notes>1</has_player_notes>
+    <player_notes_last_timestamp>1668469807</player_notes_last_timestamp>
     <player_stats>
      <coverage_type>week</coverage_type>
-     <week>7</week>
+     <week>10</week>
      <stats>
       <stat>
        <stat_id>4</stat_id>
@@ -978,7 +978,7 @@
       </stat>
       <stat>
        <stat_id>78</stat_id>
-       <value>0</value>
+       <value>1</value>
       </stat>
       <stat>
        <stat_id>11</stat_id>
@@ -1020,7 +1020,7 @@
     </player_stats>
     <player_points>
      <coverage_type>week</coverage_type>
-     <week>7</week>
+     <week>10</week>
      <total>0.00</total>
     </player_points>
    </player>
@@ -1063,9 +1063,11 @@
      <position>W/T</position>
      <position>W/R</position>
     </eligible_positions>
+    <has_player_notes>1</has_player_notes>
+    <player_notes_last_timestamp>1668370566</player_notes_last_timestamp>
     <player_stats>
      <coverage_type>week</coverage_type>
-     <week>7</week>
+     <week>10</week>
      <stats>
       <stat>
        <stat_id>4</stat_id>
@@ -1089,11 +1091,11 @@
       </stat>
       <stat>
        <stat_id>8</stat_id>
-       <value>1</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>9</stat_id>
-       <value>1</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>10</stat_id>
@@ -1105,23 +1107,23 @@
       </stat>
       <stat>
        <stat_id>78</stat_id>
-       <value>1</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>11</stat_id>
-       <value>1</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>12</stat_id>
-       <value>5</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>13</stat_id>
-       <value>1</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>14</stat_id>
-       <value>48</value>
+       <value>44</value>
       </stat>
       <stat>
        <stat_id>15</stat_id>
@@ -1129,7 +1131,7 @@
       </stat>
       <stat>
        <stat_id>80</stat_id>
-       <value>1</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>16</stat_id>
@@ -1147,8 +1149,8 @@
     </player_stats>
     <player_points>
      <coverage_type>week</coverage_type>
-     <week>7</week>
-     <total>9.50</total>
+     <week>10</week>
+     <total>2.20</total>
     </player_points>
    </player>
    <player>
@@ -1188,9 +1190,12 @@
     <eligible_positions>
      <position>K</position>
     </eligible_positions>
+    <has_player_notes>1</has_player_notes>
+    <has_recent_player_notes>1</has_recent_player_notes>
+    <player_notes_last_timestamp>1668548338</player_notes_last_timestamp>
     <player_stats>
      <coverage_type>week</coverage_type>
-     <week>7</week>
+     <week>10</week>
      <stats>
       <stat>
        <stat_id>19</stat_id>
@@ -1218,14 +1223,14 @@
       </stat>
       <stat>
        <stat_id>29</stat_id>
-       <value>0</value>
+       <value>3</value>
       </stat>
      </stats>
     </player_stats>
     <player_points>
      <coverage_type>week</coverage_type>
-     <week>7</week>
-     <total>0.00</total>
+     <week>10</week>
+     <total>3.00</total>
     </player_points>
    </player>
    <player>
@@ -1267,19 +1272,19 @@
     </eligible_positions>
     <player_stats>
      <coverage_type>week</coverage_type>
-     <week>7</week>
+     <week>10</week>
      <stats>
       <stat>
        <stat_id>31</stat_id>
-       <value>23</value>
+       <value>28</value>
       </stat>
       <stat>
        <stat_id>32</stat_id>
-       <value>1</value>
+       <value>2</value>
       </stat>
       <stat>
        <stat_id>33</stat_id>
-       <value>1</value>
+       <value>2</value>
       </stat>
       <stat>
        <stat_id>34</stat_id>
@@ -1287,7 +1292,7 @@
       </stat>
       <stat>
        <stat_id>35</stat_id>
-       <value>1</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>36</stat_id>
@@ -1299,15 +1304,15 @@
       </stat>
       <stat>
        <stat_id>67</stat_id>
-       <value>0</value>
+       <value>1</value>
       </stat>
       <stat>
        <stat_id>69</stat_id>
-       <value>364</value>
+       <value>421</value>
       </stat>
       <stat>
        <stat_id>77</stat_id>
-       <value>3</value>
+       <value>4</value>
       </stat>
       <stat>
        <stat_id>50</stat_id>
@@ -1327,11 +1332,11 @@
       </stat>
       <stat>
        <stat_id>54</stat_id>
-       <value>1</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>55</stat_id>
-       <value>0</value>
+       <value>1</value>
       </stat>
       <stat>
        <stat_id>56</stat_id>
@@ -1355,11 +1360,11 @@
       </stat>
       <stat>
        <stat_id>74</stat_id>
-       <value>1</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>75</stat_id>
-       <value>0</value>
+       <value>1</value>
       </stat>
       <stat>
        <stat_id>76</stat_id>
@@ -1373,8 +1378,8 @@
     </player_stats>
     <player_points>
      <coverage_type>week</coverage_type>
-     <week>7</week>
-     <total>10.50</total>
+     <week>10</week>
+     <total>6.00</total>
     </player_points>
    </player>
    <player>
@@ -1417,10 +1422,10 @@
      <position>W/R</position>
     </eligible_positions>
     <has_player_notes>1</has_player_notes>
-    <player_notes_last_timestamp>1666326591</player_notes_last_timestamp>
+    <player_notes_last_timestamp>1668488197</player_notes_last_timestamp>
     <player_stats>
      <coverage_type>week</coverage_type>
-     <week>7</week>
+     <week>10</week>
      <stats>
       <stat>
        <stat_id>4</stat_id>
@@ -1460,7 +1465,7 @@
       </stat>
       <stat>
        <stat_id>78</stat_id>
-       <value>1</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>11</stat_id>
@@ -1502,7 +1507,7 @@
     </player_stats>
     <player_points>
      <coverage_type>week</coverage_type>
-     <week>7</week>
+     <week>10</week>
      <total>0.00</total>
     </player_points>
    </player>
@@ -1545,10 +1550,10 @@
      <position>W/T</position>
     </eligible_positions>
     <has_player_notes>1</has_player_notes>
-    <player_notes_last_timestamp>1665963931</player_notes_last_timestamp>
+    <player_notes_last_timestamp>1668402160</player_notes_last_timestamp>
     <player_stats>
      <coverage_type>week</coverage_type>
-     <week>7</week>
+     <week>10</week>
      <stats>
       <stat>
        <stat_id>4</stat_id>
@@ -1588,15 +1593,15 @@
       </stat>
       <stat>
        <stat_id>78</stat_id>
-       <value>0</value>
+       <value>8</value>
       </stat>
       <stat>
        <stat_id>11</stat_id>
-       <value>0</value>
+       <value>8</value>
       </stat>
       <stat>
        <stat_id>12</stat_id>
-       <value>0</value>
+       <value>73</value>
       </stat>
       <stat>
        <stat_id>13</stat_id>
@@ -1612,7 +1617,7 @@
       </stat>
       <stat>
        <stat_id>80</stat_id>
-       <value>0</value>
+       <value>2</value>
       </stat>
       <stat>
        <stat_id>16</stat_id>
@@ -1630,8 +1635,8 @@
     </player_stats>
     <player_points>
      <coverage_type>week</coverage_type>
-     <week>7</week>
-     <total>0.00</total>
+     <week>10</week>
+     <total>8.30</total>
     </player_points>
    </player>
    <player>
@@ -1674,10 +1679,10 @@
      <position>W/R</position>
     </eligible_positions>
     <has_player_notes>1</has_player_notes>
-    <player_notes_last_timestamp>1666562035</player_notes_last_timestamp>
+    <player_notes_last_timestamp>1668503097</player_notes_last_timestamp>
     <player_stats>
      <coverage_type>week</coverage_type>
-     <week>7</week>
+     <week>10</week>
      <stats>
       <stat>
        <stat_id>4</stat_id>
@@ -1701,11 +1706,11 @@
       </stat>
       <stat>
        <stat_id>8</stat_id>
-       <value>5</value>
+       <value>4</value>
       </stat>
       <stat>
        <stat_id>9</stat_id>
-       <value>26</value>
+       <value>12</value>
       </stat>
       <stat>
        <stat_id>10</stat_id>
@@ -1713,19 +1718,19 @@
       </stat>
       <stat>
        <stat_id>81</stat_id>
-       <value>2</value>
+       <value>1</value>
       </stat>
       <stat>
        <stat_id>78</stat_id>
-       <value>8</value>
+       <value>4</value>
       </stat>
       <stat>
        <stat_id>11</stat_id>
-       <value>5</value>
+       <value>2</value>
       </stat>
       <stat>
        <stat_id>12</stat_id>
-       <value>53</value>
+       <value>28</value>
       </stat>
       <stat>
        <stat_id>13</stat_id>
@@ -1741,7 +1746,7 @@
       </stat>
       <stat>
        <stat_id>80</stat_id>
-       <value>3</value>
+       <value>2</value>
       </stat>
       <stat>
        <stat_id>16</stat_id>
@@ -1759,8 +1764,8 @@
     </player_stats>
     <player_points>
      <coverage_type>week</coverage_type>
-     <week>7</week>
-     <total>10.00</total>
+     <week>10</week>
+     <total>5.30</total>
     </player_points>
    </player>
    <player>
@@ -1775,19 +1780,19 @@
     </name>
     <url>https://sports.yahoo.com/nfl/players/32892</url>
     <editorial_player_key>nfl.p.32892</editorial_player_key>
-    <editorial_team_key>nfl.t.22</editorial_team_key>
-    <editorial_team_full_name>Arizona Cardinals</editorial_team_full_name>
-    <editorial_team_abbr>Ari</editorial_team_abbr>
-    <editorial_team_url>https://sports.yahoo.com/nfl/teams/arizona/</editorial_team_url>
+    <editorial_team_key>nfl.t.34</editorial_team_key>
+    <editorial_team_full_name>Houston Texans</editorial_team_full_name>
+    <editorial_team_abbr>Hou</editorial_team_abbr>
+    <editorial_team_url>https://sports.yahoo.com/nfl/teams/houston/</editorial_team_url>
     <bye_weeks>
-     <week>13</week>
+     <week>6</week>
     </bye_weeks>
     <is_keeper>
      <status></status>
      <cost></cost>
      <kept></kept>
     </is_keeper>
-    <uniform_number>26</uniform_number>
+    <uniform_number/>
     <display_position>RB</display_position>
     <headshot>
      <url>https://s.yimg.com/iu/api/res/1.2/f5CnYtB34jx.uW_O.Md01A--~C/YXBwaWQ9eXNwb3J0cztjaD0yMzM2O2NyPTE7Y3c9MTc5MDtkeD04NTc7ZHk9MDtmaT11bGNyb3A7aD02MDtxPTEwMDt3PTQ2/https://s.yimg.com/xe/i/us/sp/v/nfl_cutout/players_l/09122022/32892.png</url>
@@ -1802,10 +1807,11 @@
      <position>W/R</position>
     </eligible_positions>
     <has_player_notes>1</has_player_notes>
-    <player_notes_last_timestamp>1666324677</player_notes_last_timestamp>
+    <has_recent_player_notes>1</has_recent_player_notes>
+    <player_notes_last_timestamp>1668557048</player_notes_last_timestamp>
     <player_stats>
      <coverage_type>week</coverage_type>
-     <week>7</week>
+     <week>10</week>
      <stats>
       <stat>
        <stat_id>4</stat_id>
@@ -1829,31 +1835,31 @@
       </stat>
       <stat>
        <stat_id>8</stat_id>
-       <value>12</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>9</stat_id>
-       <value>92</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>10</stat_id>
-       <value>1</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>81</stat_id>
-       <value>4</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>78</stat_id>
-       <value>5</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>11</stat_id>
-       <value>4</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>12</stat_id>
-       <value>21</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>13</stat_id>
@@ -1861,7 +1867,7 @@
       </stat>
       <stat>
        <stat_id>14</stat_id>
-       <value>0</value>
+       <value>10</value>
       </stat>
       <stat>
        <stat_id>15</stat_id>
@@ -1869,11 +1875,11 @@
       </stat>
       <stat>
        <stat_id>80</stat_id>
-       <value>1</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>16</stat_id>
-       <value>1</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>18</stat_id>
@@ -1887,8 +1893,8 @@
     </player_stats>
     <player_points>
      <coverage_type>week</coverage_type>
-     <week>7</week>
-     <total>21.00</total>
+     <week>10</week>
+     <total>0.50</total>
     </player_points>
    </player>
    <player>
@@ -1928,9 +1934,11 @@
     <eligible_positions>
      <position>K</position>
     </eligible_positions>
+    <has_player_notes>1</has_player_notes>
+    <player_notes_last_timestamp>1668449826</player_notes_last_timestamp>
     <player_stats>
      <coverage_type>week</coverage_type>
-     <week>7</week>
+     <week>10</week>
      <stats>
       <stat>
        <stat_id>19</stat_id>
@@ -1938,7 +1946,7 @@
       </stat>
       <stat>
        <stat_id>20</stat_id>
-       <value>1</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>21</stat_id>
@@ -1958,14 +1966,14 @@
       </stat>
       <stat>
        <stat_id>29</stat_id>
-       <value>3</value>
+       <value>4</value>
       </stat>
      </stats>
     </player_stats>
     <player_points>
      <coverage_type>week</coverage_type>
-     <week>7</week>
-     <total>6.00</total>
+     <week>10</week>
+     <total>4.00</total>
     </player_points>
    </player>
    <player>
@@ -2007,27 +2015,27 @@
     </eligible_positions>
     <player_stats>
      <coverage_type>week</coverage_type>
-     <week>7</week>
+     <week>10</week>
      <stats>
       <stat>
        <stat_id>31</stat_id>
-       <value>0</value>
+       <value>30</value>
       </stat>
       <stat>
        <stat_id>32</stat_id>
-       <value>0</value>
+       <value>2</value>
       </stat>
       <stat>
        <stat_id>33</stat_id>
-       <value>0</value>
+       <value>2</value>
       </stat>
       <stat>
        <stat_id>34</stat_id>
-       <value>0</value>
+       <value>2</value>
       </stat>
       <stat>
        <stat_id>35</stat_id>
-       <value>0</value>
+       <value>1</value>
       </stat>
       <stat>
        <stat_id>36</stat_id>
@@ -2039,15 +2047,15 @@
       </stat>
       <stat>
        <stat_id>67</stat_id>
-       <value>0</value>
+       <value>1</value>
       </stat>
       <stat>
        <stat_id>69</stat_id>
-       <value>0</value>
+       <value>486</value>
       </stat>
       <stat>
        <stat_id>77</stat_id>
-       <value>0</value>
+       <value>3</value>
       </stat>
       <stat>
        <stat_id>50</stat_id>
@@ -2071,7 +2079,7 @@
       </stat>
       <stat>
        <stat_id>55</stat_id>
-       <value>0</value>
+       <value>1</value>
       </stat>
       <stat>
        <stat_id>56</stat_id>
@@ -2099,7 +2107,7 @@
       </stat>
       <stat>
        <stat_id>75</stat_id>
-       <value>0</value>
+       <value>1</value>
       </stat>
       <stat>
        <stat_id>76</stat_id>
@@ -2113,8 +2121,8 @@
     </player_stats>
     <player_points>
      <coverage_type>week</coverage_type>
-     <week>7</week>
-     <total>0.00</total>
+     <week>10</week>
+     <total>15.50</total>
     </player_points>
    </player>
    <player>
@@ -2128,6 +2136,9 @@
      <ascii_last>Woods</ascii_last>
     </name>
     <url>https://sports.yahoo.com/nfl/players/34029</url>
+    <status>Q</status>
+    <status_full>Questionable</status_full>
+    <injury_note>Shoulder</injury_note>
     <editorial_player_key>nfl.p.34029</editorial_player_key>
     <editorial_team_key>nfl.t.11</editorial_team_key>
     <editorial_team_full_name>Indianapolis Colts</editorial_team_full_name>
@@ -2156,10 +2167,10 @@
      <position>W/T</position>
     </eligible_positions>
     <has_player_notes>1</has_player_notes>
-    <player_notes_last_timestamp>1666558263</player_notes_last_timestamp>
+    <player_notes_last_timestamp>1668213581</player_notes_last_timestamp>
     <player_stats>
      <coverage_type>week</coverage_type>
-     <week>7</week>
+     <week>10</week>
      <stats>
       <stat>
        <stat_id>4</stat_id>
@@ -2199,15 +2210,15 @@
       </stat>
       <stat>
        <stat_id>78</stat_id>
-       <value>2</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>11</stat_id>
-       <value>1</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>12</stat_id>
-       <value>4</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>13</stat_id>
@@ -2223,7 +2234,7 @@
       </stat>
       <stat>
        <stat_id>80</stat_id>
-       <value>1</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>16</stat_id>
@@ -2241,8 +2252,8 @@
     </player_stats>
     <player_points>
      <coverage_type>week</coverage_type>
-     <week>7</week>
-     <total>0.90</total>
+     <week>10</week>
+     <total>0.00</total>
     </player_points>
    </player>
    <player>
@@ -2282,9 +2293,11 @@
     <eligible_positions>
      <position>K</position>
     </eligible_positions>
+    <has_player_notes>1</has_player_notes>
+    <player_notes_last_timestamp>1668439270</player_notes_last_timestamp>
     <player_stats>
      <coverage_type>week</coverage_type>
-     <week>7</week>
+     <week>10</week>
      <stats>
       <stat>
        <stat_id>19</stat_id>
@@ -2292,11 +2305,11 @@
       </stat>
       <stat>
        <stat_id>20</stat_id>
-       <value>1</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>21</stat_id>
-       <value>0</value>
+       <value>1</value>
       </stat>
       <stat>
        <stat_id>22</stat_id>
@@ -2312,14 +2325,14 @@
       </stat>
       <stat>
        <stat_id>29</stat_id>
-       <value>0</value>
+       <value>2</value>
       </stat>
      </stats>
     </player_stats>
     <player_points>
      <coverage_type>week</coverage_type>
-     <week>7</week>
-     <total>3.00</total>
+     <week>10</week>
+     <total>5.00</total>
     </player_points>
    </player>
    <player>
@@ -2360,38 +2373,38 @@
      <position>QB</position>
     </eligible_positions>
     <has_player_notes>1</has_player_notes>
-    <player_notes_last_timestamp>1666555245</player_notes_last_timestamp>
+    <player_notes_last_timestamp>1668386795</player_notes_last_timestamp>
     <player_stats>
      <coverage_type>week</coverage_type>
-     <week>7</week>
+     <week>10</week>
      <stats>
       <stat>
        <stat_id>4</stat_id>
-       <value>228</value>
+       <value>236</value>
       </stat>
       <stat>
        <stat_id>5</stat_id>
-       <value>0</value>
-      </stat>
-      <stat>
-       <stat_id>6</stat_id>
-       <value>2</value>
-      </stat>
-      <stat>
-       <stat_id>7</stat_id>
-       <value>5</value>
-      </stat>
-      <stat>
-       <stat_id>79</stat_id>
-       <value>11</value>
-      </stat>
-      <stat>
-       <stat_id>8</stat_id>
        <value>1</value>
       </stat>
       <stat>
-       <stat_id>9</stat_id>
+       <stat_id>6</stat_id>
+       <value>0</value>
+      </stat>
+      <stat>
+       <stat_id>7</stat_id>
+       <value>2</value>
+      </stat>
+      <stat>
+       <stat_id>79</stat_id>
+       <value>12</value>
+      </stat>
+      <stat>
+       <stat_id>8</stat_id>
        <value>4</value>
+      </stat>
+      <stat>
+       <stat_id>9</stat_id>
+       <value>14</value>
       </stat>
       <stat>
        <stat_id>10</stat_id>
@@ -2399,7 +2412,7 @@
       </stat>
       <stat>
        <stat_id>81</stat_id>
-       <value>0</value>
+       <value>1</value>
       </stat>
       <stat>
        <stat_id>78</stat_id>
@@ -2435,7 +2448,7 @@
       </stat>
       <stat>
        <stat_id>18</stat_id>
-       <value>2</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>57</stat_id>
@@ -2445,8 +2458,8 @@
     </player_stats>
     <player_points>
      <coverage_type>week</coverage_type>
-     <week>7</week>
-     <total>-2.38</total>
+     <week>10</week>
+     <total>14.34</total>
     </player_points>
    </player>
    <player>
@@ -2488,27 +2501,27 @@
     </eligible_positions>
     <player_stats>
      <coverage_type>week</coverage_type>
-     <week>7</week>
+     <week>10</week>
      <stats>
       <stat>
        <stat_id>31</stat_id>
-       <value>24</value>
+       <value>30</value>
       </stat>
       <stat>
        <stat_id>32</stat_id>
-       <value>2</value>
+       <value>3</value>
       </stat>
       <stat>
        <stat_id>33</stat_id>
-       <value>0</value>
-      </stat>
-      <stat>
-       <stat_id>34</stat_id>
        <value>1</value>
       </stat>
       <stat>
-       <stat_id>35</stat_id>
+       <stat_id>34</stat_id>
        <value>0</value>
+      </stat>
+      <stat>
+       <stat_id>35</stat_id>
+       <value>1</value>
       </stat>
       <stat>
        <stat_id>36</stat_id>
@@ -2520,15 +2533,15 @@
       </stat>
       <stat>
        <stat_id>67</stat_id>
-       <value>0</value>
+       <value>1</value>
       </stat>
       <stat>
        <stat_id>69</stat_id>
-       <value>330</value>
+       <value>408</value>
       </stat>
       <stat>
        <stat_id>77</stat_id>
-       <value>3</value>
+       <value>2</value>
       </stat>
       <stat>
        <stat_id>50</stat_id>
@@ -2548,11 +2561,11 @@
       </stat>
       <stat>
        <stat_id>54</stat_id>
-       <value>1</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>55</stat_id>
-       <value>0</value>
+       <value>1</value>
       </stat>
       <stat>
        <stat_id>56</stat_id>
@@ -2576,11 +2589,11 @@
       </stat>
       <stat>
        <stat_id>74</stat_id>
-       <value>1</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>75</stat_id>
-       <value>0</value>
+       <value>1</value>
       </stat>
       <stat>
        <stat_id>76</stat_id>
@@ -2594,8 +2607,8 @@
     </player_stats>
     <player_points>
      <coverage_type>week</coverage_type>
-     <week>7</week>
-     <total>5.50</total>
+     <week>10</week>
+     <total>10.00</total>
     </player_points>
    </player>
    <player>
@@ -2637,23 +2650,23 @@
     </eligible_positions>
     <player_stats>
      <coverage_type>week</coverage_type>
-     <week>7</week>
+     <week>10</week>
      <stats>
       <stat>
        <stat_id>31</stat_id>
-       <value>10</value>
+       <value>17</value>
       </stat>
       <stat>
        <stat_id>32</stat_id>
-       <value>2</value>
-      </stat>
-      <stat>
-       <stat_id>33</stat_id>
        <value>3</value>
       </stat>
       <stat>
-       <stat_id>34</stat_id>
+       <stat_id>33</stat_id>
        <value>0</value>
+      </stat>
+      <stat>
+       <stat_id>34</stat_id>
+       <value>1</value>
       </stat>
       <stat>
        <stat_id>35</stat_id>
@@ -2669,15 +2682,15 @@
       </stat>
       <stat>
        <stat_id>67</stat_id>
-       <value>0</value>
+       <value>3</value>
       </stat>
       <stat>
        <stat_id>69</stat_id>
-       <value>341</value>
+       <value>297</value>
       </stat>
       <stat>
        <stat_id>77</stat_id>
-       <value>4</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>50</stat_id>
@@ -2689,11 +2702,11 @@
       </stat>
       <stat>
        <stat_id>52</stat_id>
-       <value>1</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>53</stat_id>
-       <value>0</value>
+       <value>1</value>
       </stat>
       <stat>
        <stat_id>54</stat_id>
@@ -2721,11 +2734,11 @@
       </stat>
       <stat>
        <stat_id>73</stat_id>
-       <value>0</value>
+       <value>1</value>
       </stat>
       <stat>
        <stat_id>74</stat_id>
-       <value>1</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>75</stat_id>
@@ -2743,8 +2756,8 @@
     </player_stats>
     <player_points>
      <coverage_type>week</coverage_type>
-     <week>7</week>
-     <total>13.00</total>
+     <week>10</week>
+     <total>10.00</total>
     </player_points>
    </player>
    <player>
@@ -2785,18 +2798,18 @@
      <position>QB</position>
     </eligible_positions>
     <has_player_notes>1</has_player_notes>
-    <player_notes_last_timestamp>1666566799</player_notes_last_timestamp>
+    <player_notes_last_timestamp>1668440263</player_notes_last_timestamp>
     <player_stats>
      <coverage_type>week</coverage_type>
-     <week>7</week>
+     <week>10</week>
      <stats>
       <stat>
        <stat_id>4</stat_id>
-       <value>302</value>
+       <value>319</value>
       </stat>
       <stat>
        <stat_id>5</stat_id>
-       <value>2</value>
+       <value>1</value>
       </stat>
       <stat>
        <stat_id>6</stat_id>
@@ -2804,11 +2817,11 @@
       </stat>
       <stat>
        <stat_id>7</stat_id>
-       <value>1</value>
+       <value>4</value>
       </stat>
       <stat>
        <stat_id>79</stat_id>
-       <value>12</value>
+       <value>15</value>
       </stat>
       <stat>
        <stat_id>8</stat_id>
@@ -2870,8 +2883,8 @@
     </player_stats>
     <player_points>
      <coverage_type>week</coverage_type>
-     <week>7</week>
-     <total>18.28</total>
+     <week>10</week>
+     <total>12.26</total>
     </player_points>
    </player>
    <player>
@@ -2913,9 +2926,11 @@
      <position>W/T</position>
      <position>W/R</position>
     </eligible_positions>
+    <has_player_notes>1</has_player_notes>
+    <player_notes_last_timestamp>1668242601</player_notes_last_timestamp>
     <player_stats>
      <coverage_type>week</coverage_type>
-     <week>7</week>
+     <week>10</week>
      <stats>
       <stat>
        <stat_id>4</stat_id>
@@ -2955,15 +2970,15 @@
       </stat>
       <stat>
        <stat_id>78</stat_id>
-       <value>0</value>
+       <value>1</value>
       </stat>
       <stat>
        <stat_id>11</stat_id>
-       <value>0</value>
+       <value>1</value>
       </stat>
       <stat>
        <stat_id>12</stat_id>
-       <value>0</value>
+       <value>17</value>
       </stat>
       <stat>
        <stat_id>13</stat_id>
@@ -2979,7 +2994,7 @@
       </stat>
       <stat>
        <stat_id>80</stat_id>
-       <value>0</value>
+       <value>1</value>
       </stat>
       <stat>
        <stat_id>16</stat_id>
@@ -2997,8 +3012,8 @@
     </player_stats>
     <player_points>
      <coverage_type>week</coverage_type>
-     <week>7</week>
-     <total>0.00</total>
+     <week>10</week>
+     <total>2.20</total>
     </player_points>
    </player>
    <player>
@@ -3038,17 +3053,19 @@
     <eligible_positions>
      <position>K</position>
     </eligible_positions>
+    <has_player_notes>1</has_player_notes>
+    <player_notes_last_timestamp>1668527920</player_notes_last_timestamp>
     <player_stats>
      <coverage_type>week</coverage_type>
-     <week>7</week>
+     <week>10</week>
      <stats>
       <stat>
        <stat_id>19</stat_id>
-       <value>1</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>20</stat_id>
-       <value>1</value>
+       <value>0</value>
       </stat>
       <stat>
        <stat_id>21</stat_id>
@@ -3056,11 +3073,11 @@
       </stat>
       <stat>
        <stat_id>22</stat_id>
-       <value>0</value>
+       <value>1</value>
       </stat>
       <stat>
        <stat_id>23</stat_id>
-       <value>0</value>
+       <value>2</value>
       </stat>
       <stat>
        <stat_id>24</stat_id>
@@ -3074,11 +3091,11 @@
     </player_stats>
     <player_points>
      <coverage_type>week</coverage_type>
-     <week>7</week>
-     <total>11.00</total>
+     <week>10</week>
+     <total>19.00</total>
     </player_points>
    </player>
   </players>
  </league>
 </fantasy_content>
-<!-- fantasy-sports-api- -public-production-bf1-7cd98d4c4f-xjcmz Tue Oct 25 17:18:29 UTC 2022 -->
+<!-- fantasy-sports-api- -public-production-bf1-66c69d745-r8zvk Wed Nov 16 17:45:07 UTC 2022 -->

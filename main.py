@@ -8,8 +8,8 @@ import csv
 # NEEDS TO DOWNLOAD ONCE BEFORE HAVING CORRECT DATA aka RUN TWICE sry myself
 
 weekstart = 1
-getNewDataWeek = 5
-weekend = 7  #(exclusive i think)
+getNewDataWeek = 9
+weekend = 11  #(exclusive i think)
 gamekey="414."
 leaguekey="859655" #683339
 getData = False
@@ -335,7 +335,7 @@ for player in AllPlayers.values():
             highWeekPlayerWeek = week
             highestWeekPlayer = player
 print("{}, {}, {:.2f} pts, week {} ".format(highestWeekPlayer.full_name, highestWeekPlayer.lastTeamOwnedName,
-                                            highWeekPlayerScore, highestWeekScoreWeek))
+                                            highWeekPlayerScore, highWeekPlayerWeek))
 
 print()
 print("$5 'The WTF', Most negative weekly single player score:")
